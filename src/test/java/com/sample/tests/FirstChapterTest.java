@@ -11,12 +11,6 @@ import org.testng.annotations.Test;
 @Epic("Chapters Tests")
 @Feature("Validate First Chapter")
 public class FirstChapterTest extends BaseTest {
-    @BeforeTest
-    public void setUp() {
-        container.start();
-        WebDriverRunner.setWebDriver(container.getWebDriver());
-    }
-
     @Test(description = "Check text on Chapter 1 page")
     public void checkTextOnFirstChapterPage() {
         new HomePage()
@@ -26,10 +20,5 @@ public class FirstChapterTest extends BaseTest {
                 .checkText("Assert that this text is on the page")
                 .navigateToHomePage()
                 .shouldBeOnHomePage();
-    }
-
-    @AfterTest(alwaysRun = true)
-    public void tearDown() {
-        container.stop();
     }
 }

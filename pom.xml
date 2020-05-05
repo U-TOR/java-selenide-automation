@@ -44,7 +44,9 @@
                     <systemPropertyVariables>
                         <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
                         <seledire.reportsFolder>${project.build.directory}/reports</seledire.reportsFolder>
-                        <selenide.browser>chrome</selenide.browser>
+                        <selenide.browser>${browser.name}</selenide.browser>
+                        <browser.name>${browser.name}</browser.name>
+                        <environment.type>${environment.type}</environment.type>
                         <selenide.baseUrl>http://book.theautomatedtester.co.uk</selenide.baseUrl>
                     </systemPropertyVariables>
                 </configuration>
@@ -68,6 +70,45 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>browser.chrome</id>
+            <properties>
+                <browser.name>chrome</browser.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>browser.firefox</id>
+            <properties>
+                <browser.name>firefox</browser.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>environment.local.browser</id>
+            <properties>
+                <environment.type>local.browser</environment.type>
+            </properties>
+        </profile>
+        <profile>
+            <id>environment.local.container</id>
+            <properties>
+                <environment.type>local.container</environment.type>
+            </properties>
+        </profile>
+        <profile>
+            <id>environment.local.selenoid</id>
+            <properties>
+                <environment.type>local.selenoid</environment.type>
+            </properties>
+        </profile>
+        <profile>
+            <id>environment.local.zalenium</id>
+            <properties>
+                <environment.type>local.zalenium</environment.type>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>

@@ -9,13 +9,24 @@ This is a project for running Selenide automated UI tests on TestContainers
 * Maven
 * Docker 
 
+### Testing Environents
+
+Tests can be executed on: 
+
+- [x] Local Chrome and Firefox (requires chromedriver and geckodriver installation and availability in PATH)
+- [ ] Headless Chrome and Firefox (same requirements)
+- [x] Docker container (requires Docker)
+- [ ] Selenoid cluster (requires Docker and docker-compose)
+- [ ] Zalenium cluster (requires Docker and docker-compose)
+- [ ] SaaS solutions
+
 ### How to run
 
 
 0. Start Docker service 
 1. Run tests:
 ```
-mvn clean test
+mvn clean test -Pbrowser.chrome -P environment.local.container
 ```
 3. Build reports to temp folder and view in browser:    
 ```
