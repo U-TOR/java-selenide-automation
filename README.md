@@ -14,11 +14,22 @@ This is a project for running Selenide automated UI tests on TestContainers
 Tests can be executed on: 
 
 - [x] Local Chrome and Firefox (requires chromedriver and geckodriver installation and availability in PATH)
-- [ ] Headless Chrome and Firefox (same requirements)
+- [x] Headless Chrome and Firefox (same requirements)
 - [x] Docker container (requires Docker)
 - [ ] Selenoid cluster (requires Docker and docker-compose)
 - [ ] Zalenium cluster (requires Docker and docker-compose)
 - [ ] SaaS solutions
+
+Predefined browser resolutions:
+ 
+- 640x360
+- 800x600
+- 1024x768
+- 1280x720
+- 1366x768
+- 1600x900
+- 1920x1080
+- 3840x2160
 
 ### How to run
 

@@ -48,6 +48,9 @@
                         <browser.name>${browser.name}</browser.name>
                         <environment.type>${environment.type}</environment.type>
                         <selenide.baseUrl>http://book.theautomatedtester.co.uk</selenide.baseUrl>
+                        <screen.width>${screen.width}</screen.width>
+                        <screen.height>${screen.height}</screen.height>
+                        <selenide.baseUrl>http://book.theautomatedtester.co.uk</selenide.baseUrl>
                     </systemPropertyVariables>
                 </configuration>
                 <dependencies>
@@ -91,6 +94,12 @@
             </properties>
         </profile>
         <profile>
+            <id>environment.local.headless</id>
+            <properties>
+                <environment.type>local.headless</environment.type>
+            </properties>
+        </profile>
+        <profile>
             <id>environment.local.container</id>
             <properties>
                 <environment.type>local.container</environment.type>
@@ -106,6 +115,62 @@
             <id>environment.local.zalenium</id>
             <properties>
                 <environment.type>local.zalenium</environment.type>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.640x360</id>
+            <properties>
+                <screen.width>640</screen.width>
+                <screen.height>360</screen.height>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.800x600</id>
+            <properties>
+                <screen.width>800</screen.width>
+                <screen.height>600</screen.height>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.1024x768</id>
+            <properties>
+                <screen.width>1024</screen.width>
+                <screen.height>768</screen.height>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.1280x720</id>
+            <properties>
+                <screen.width>1280</screen.width>
+                <screen.height>720</screen.height>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.1366x768</id>
+            <properties>
+                <screen.width>1366</screen.width>
+                <screen.height>768</screen.height>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.1600x900</id>
+            <properties>
+                <screen.width>1600</screen.width>
+                <screen.height>900</screen.height>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.1920x1080</id>
+            <properties>
+                <screen.width>1920</screen.width>
+                <screen.height>1080</screen.height>
+            </properties>
+        </profile>
+        <profile>
+            <id>resolution.3840x2160</id>
+            <properties>
+                <screen.width>3840</screen.width>
+                <screen.height>2160</screen.height>
             </properties>
         </profile>
     </profiles>

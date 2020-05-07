@@ -1,11 +1,8 @@
 package com.sample.tests;
 
-import com.codeborne.selenide.WebDriverRunner;
 import com.sample.pages.HomePage;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 @Epic("Chapters Tests")
