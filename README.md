@@ -16,7 +16,7 @@ Tests can be executed on:
 - [x] Local Chrome and Firefox (requires chromedriver and geckodriver installation and availability in PATH)
 - [x] Headless Chrome and Firefox (same requirements)
 - [x] Docker container (requires Docker)
-- [ ] Selenoid cluster (requires Docker and docker-compose)
+- [x] Selenoid cluster (requires Docker and docker-compose)
 - [ ] Zalenium cluster (requires Docker and docker-compose)
 - [ ] SaaS solutions
 
@@ -49,6 +49,20 @@ mvn allure:report
 ```
 
 Sample Allure report can be found on http://sample-selenide-automation.surge.sh
+
+### Environment specific notes
+
+#### Selenoid Cluster
+
+1. Pull browser images before running tests: 
+    ```
+    docker pull selenoid/vnc_firefox:76.0
+    docker pull selenoid/vnc_chrome:81.0
+    ```
+2. Run docker-compose
+   ```
+   docker-compose -f selenoid-docker-compose.yml up
+   ```
 
 ### Travis CI Integration
 
