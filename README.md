@@ -64,6 +64,21 @@ Sample Allure report can be found on http://sample-selenide-automation.surge.sh
    docker-compose -f selenoid-docker-compose.yml up
    ```
 
+### Checkstyle
+
+Project uses Google Code style. See https://google.github.io/styleguide. 
+
+#### IntelliJ IDEA setup 
+1. Open Settings -> Editor -> Code Style.
+2. In Scheme settings (settings icon on right side) -> import schemes-> intellij idea code style xml.
+3. Select $PROJECT_DIR/intellij-java-google-style.xml.
+4. in Scheme dropdown select the GoogleStyle IDE (newly added style). Click on apply and close.
+
+#### Validating project style
+```bash
+mvn checkstyle:check
+```
+
 ### Travis CI Integration
 
 This project is integrated with Travis CI, see https://travis-ci.com/vikmaksimenko/sample-selenide-automation 

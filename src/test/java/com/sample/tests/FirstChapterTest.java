@@ -8,14 +8,15 @@ import org.testng.annotations.Test;
 @Epic("Chapters Tests")
 @Feature("Validate First Chapter")
 public class FirstChapterTest extends BaseTest {
-    @Test(description = "Check text on Chapter 1 page")
-    public void checkTextOnFirstChapterPage() {
-        new HomePage()
-                .openHomePage()
-                .shouldBeOnHomePage()
-                .openChapter("Chapter1")
-                .checkText("Assert that this text is on the page")
-                .navigateToHomePage()
-                .shouldBeOnHomePage();
-    }
+
+  @Test(description = "Check text on Chapter 1 page")
+  public void checkTextOnFirstChapterPage() {
+    new HomePage()
+        .openHomePage()
+        .shouldBeOnHomePage()
+        .openChapter("Chapter1")
+        .checkText("Assert that this text is on the page")
+        .navigateToHomePage()
+        .shouldBeOnHomePage();
+  }
 }

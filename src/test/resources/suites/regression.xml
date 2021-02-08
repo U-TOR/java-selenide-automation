@@ -1,9 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Regression" verbose="1" >
-    <test name="First Chapter Test"   >
-        <classes>
-            <class name="com.sample.tests.FirstChapterTest"/>
-        </classes>
-    </test>
+<suite name="Regression" verbose="1">
+  <test name="First Chapter Test">
+    <classes>
+      <class name="com.sample.tests.FirstChapterTest"/>
+    </classes>
+  </test>
 </suite>
